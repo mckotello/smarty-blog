@@ -1,0 +1,72 @@
+$primary: #2c3e50;
+$accent: #3498db;
+$bg: #f5f7fa;
+
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, system-ui, sans-serif;
+  margin: 0; background: $bg; color: #333;
+  line-height: 1.6;
+}
+header {
+  background: $primary; padding: 1rem 2rem;
+  a { color: #fff; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+}
+main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+footer { text-align: center; padding: 2rem; color: #888; }
+
+.category-block {
+  background: #fff; border-radius: 8px; padding: 1.5rem;
+  margin-bottom: 2rem; box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+.category-header { margin-bottom: 1rem; }
+.btn {
+  display: inline-block; padding: .5rem 1rem;
+  background: $accent; color: #fff; text-decoration: none;
+  border-radius: 4px; font-size: .9rem;
+  &:hover { background: darken($accent, 10%); }
+}
+.posts-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.post-card {
+  background: $bg; padding: 1rem; border-radius: 6px;
+  img { width: 100%; height: 140px; object-fit: cover; border-radius: 4px; }
+  h3 { margin: .5rem 0; font-size: 1rem;
+    a { color: $primary; text-decoration: none; }
+  }
+  p { font-size: .9rem; color: #555; }
+  small { color: #888; }
+}
+.posts-list .post-row {
+  display: flex; gap: 1rem; background: #fff; padding: 1rem;
+  margin-bottom: 1rem; border-radius: 6px;
+  img { width: 180px; height: 120px; object-fit: cover; border-radius: 4px; }
+  h3 { margin-top: 0; a { color: $primary; text-decoration: none; } }
+}
+.sort-bar { margin: 1rem 0;
+  a { color: $accent; text-decoration: none; }
+  a.active { font-weight: bold; text-decoration: underline; }
+}
+.pagination {
+  margin-top: 2rem; text-align: center;
+  a, .current {
+    display: inline-block; padding: .4rem .8rem; margin: 0 .2rem;
+    border-radius: 4px; text-decoration: none;
+  }
+  a { background: #fff; color: $primary; }
+  .current { background: $accent; color: #fff; }
+}
+.post-full {
+  background: #fff; padding: 2rem; border-radius: 8px;
+  .meta { color: #888; margin-bottom: 1rem; font-size: .9rem; }
+  .categories { margin-bottom: 1rem;
+    a { color: $accent; }
+  }
+  .cover { width: 100%; max-height: 400px; object-fit: cover; border-radius: 6px; }
+  .lead { font-size: 1.15rem; font-weight: 500; color: #444; }
+  .content { font-size: 1rem; }
+}
+.similar { margin-top: 2rem; }
+.back { display: inline-block; margin-bottom: 1rem; color: $accent; text-decoration: none; }

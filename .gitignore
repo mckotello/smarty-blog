@@ -1,0 +1,28 @@
+# Composer
+/vendor/
+/src/vendor/
+composer.lock
+
+# Smarty compile/cache
+/src/var/
+/src/smarty/templates_c/
+/src/smarty/cache/
+
+# Загруженные изображения (если есть)
+/src/public/assets/images/uploads/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+
+# Логи
+*.log
